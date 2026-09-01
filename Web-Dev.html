@@ -1,0 +1,271 @@
+WEB APPLICATION DEVELOPMENT LAB
+BCA – V Semester
+Simple, Execute-Ready Lab Programs
+
+PROGRAM 1
+Create a Simple Personal Webpage Using HTML5
+Program Code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Webpage</title>
+</head>
+<body>
+
+    <h1>My Personal Webpage</h1>
+
+    <h2>About Me</h2>
+    <p>Hello! My name is Mohammed Usman. I am a BCA student.</p>
+
+    <h2>My Hobbies</h2>
+    <ul>
+        <li>Coding</li>
+        <li>Gaming</li>
+        <li>Watching Movies</li>
+    </ul>
+
+    <h2>My Education</h2>
+    <table border="1">
+        <tr>
+            <th>Course</th>
+            <th>College</th>
+        </tr>
+        <tr>
+            <td>BCA</td>
+            <td>Presidency Degree College</td>
+        </tr>
+    </table>
+
+    <h2>My Image</h2>
+    <img src="photo.jpg" width="150">
+
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2>Video</h2>
+    <video width="300" controls>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <p>
+        Visit <a href="https://www.google.com">Google</a>
+    </p>
+
+</body>
+</html>
+Execution Note: Save as program1.html. Keep photo.jpg, audio.mp3 and video.mp4 in the same folder.
+
+PROGRAM 2
+Design and Style a Responsive Webpage Using CSS3
+Program Code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Webpage</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Welcome to My Webpage</h1>
+        <p>This is a simple responsive webpage.</p>
+        <p>CSS is used to design this page.</p>
+    </div>
+
+</body>
+</html>
+Execution Note: Save as program2.html. Open it in a browser and resize the window to observe the responsive effect.
+
+PROGRAM 3
+Develop a Responsive Webpage Using Bootstrap
+Program Code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Webpage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Website</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <!-- Alert -->
+        <div class="alert alert-success">
+            Welcome to my website!
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">My Card</h3>
+                <p class="card-text">This is a simple Bootstrap card.</p>
+                <button class="btn btn-primary">Click Me</button>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <h3 class="mt-4">Contact Form</h3>
+
+        <form>
+            <input type="text" class="form-control mb-2" placeholder="Enter Name">
+            <input type="email" class="form-control mb-2" placeholder="Enter Email">
+            <button class="btn btn-success">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+</html>
+Execution Note: Save as program3.html. An internet connection is required because Bootstrap is loaded from its CDN.
+
+PROGRAM 4
+JavaScript Variables, Operators, Conditional Statements, Loops and Arrays
+Program Code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Program</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Demo</h2>
+
+    <script>
+
+        // Variables
+        let a = 10;
+        let b = 5;
+
+        // Operators
+        let sum = a + b;
+
+        document.write("Sum = " + sum + "<br>");
+
+        // Conditional Statement
+        if (a > b) {
+            document.write("A is greater than B<br>");
+        } else {
+            document.write("B is greater than A<br>");
+        }
+
+        // Loop
+        document.write("Numbers:<br>");
+
+        for (let i = 1; i <= 5; i++) {
+            document.write(i + "<br>");
+        }
+
+        // Array
+        let fruits = ["Apple", "Mango", "Orange"];
+
+        document.write("Fruits:<br>");
+
+        for (let fruit of fruits) {
+            document.write(fruit + "<br>");
+        }
+
+    </script>
+
+</body>
+</html>
+Execution Note: Save as program4.html and open it in a browser.
+
+PROGRAM 5
+Dynamically Change Content, Color and Image Using DOM
+Program Code
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+
+    <h1 id="title">Hello</h1>
+
+    <p id="text">This is the original text.</p>
+
+    <img id="image" src="image1.jpg" width="200">
+
+    <br><br>
+
+    <button onclick="changePage()">Change</button>
+
+    <script>
+
+        function changePage() {
+
+            document.getElementById("title").innerHTML = "Welcome!";
+
+            document.getElementById("text").innerHTML =
+                "The content has been changed.";
+
+            document.body.style.backgroundColor = "lightblue";
+
+            document.getElementById("image").src = "image2.jpg";
+        }
+
+    </script>
+
+</body>
+</html>
+Execution Note: Save as program5.html. Keep image1.jpg and image2.jpg in the same folder. Click the Change button to see the DOM changes.
+
+EXECUTION / FILE STRUCTURE
+Keep the following files together in one folder when executing the programs:
+Web Application Development Lab
+│
+├── program1.html
+├── program2.html
+├── program3.html
+├── program4.html
+├── program5.html
+├── photo.jpg
+├── audio.mp3
+├── video.mp4
+├── image1.jpg
+└── image2.jpg
+How to Execute: Save each program with the specified .html filename and open the file in any modern web browser.
